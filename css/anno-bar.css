@@ -1,0 +1,226 @@
+/*==============================================================================
+
+ * Plugin Name: Covid-19 Announcement Bar / Banner / Alert Plugin by ixTheme
+ * Plugin Author: ixtheme - (https://themeforest.net/user/ixtheme)
+ * Description: Announcement Bar / Banner / Alert Plugin
+ * Version: 1.0
+ * Copyright 2020 ixtheme
+
+=================================================
+    [Table of CSS contents]
+
+    Announcement bar default style
+    Announcement bar solid
+    Announcement bar bottom-fixed
+    Announcement bar bottom-fixed-sm left
+	Announcement bar center-fixed
+==================================================*/
+
+
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400i,500,600&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*===== Announcement bar default style ===== */
+.anno__wrap h1,
+.anno__wrap h2,
+.anno__wrap h3,
+.anno__wrap h4,
+.anno__wrap h5,
+.anno__wrap h6,
+.anno__wrap p {
+	margin: 0;
+}
+
+.anno__wrap.text-center {
+	text-align: center;
+}
+
+.anno__wrap {
+	font-family: 'Work Sans', sans-serif;
+	font-size: 15px;
+	font-weight: 500;
+	line-height: 1.6;
+	position: relative;
+	z-index: 9993;
+	color: #005062;
+	background-color: #FFE4C1;
+	padding: 20px;
+	outline: 1px solid #d9c09f;
+	outline-offset: -6px;
+	-webkit-transition: .4s;
+	-moz-transition: .4s;
+	-ms-transition: .4s;
+	-o-transition: .4s;
+	transition: .4s;
+	margin: 8px;
+	margin-right: 0;
+	width: calc(100% - 16px)
+}
+
+.anno__wrap::after {
+	position: absolute;
+	content: "";
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background-image: url(../img/18706.jpg);
+	background-size: cover;
+	z-index: -1;
+	opacity: .5;
+}
+
+.anno__wrap p {
+	margin-top: -6px;
+}
+
+.anno__wrap p .link {
+	color: #c84d4d;
+	font-weight: 600;
+	font-size: 15px;
+	text-decoration: none;
+}
+
+.anno__wrap .link:hover {
+	text-decoration: underline;
+}
+
+.anno__btn:focus,
+.anno__dismiss:focus {
+	border: 0;
+	outline: 0;
+	text-decoration: none;
+	box-shadow: none;
+}
+
+.anno__btn,
+.anno__dismiss {
+	font-family: 'Work Sans', sans-serif;
+	border: 0;
+	outline: 0;
+	text-decoration: none;
+	display: inline-block;
+	height: 30px;
+	line-height: 30px;
+	padding: 0 12px;
+	font-size: 13px;
+	font-weight: 600;
+	color: #FFE4C1;
+	background-color: #005062;
+	border-radius: 3px;
+	cursor: pointer;
+	text-transform: uppercase;
+	margin-right: 5px;
+	-webkit-transition: .3s;
+	-moz-transition: .3s;
+	-ms-transition: .3s;
+	-o-transition: .3s;
+	transition: .3s;
+	margin-top: 8px;
+}
+
+.anno__btn.inlinee {
+	height: 25px;
+	line-height: 25px;
+	padding: 0 8px;
+	margin-top: 0;
+}
+
+.anno__btn:hover {
+	background-color: #003642;
+}
+
+.anno__dismiss {
+	background-color: #ffb933;
+	color: #005062;
+}
+
+.anno__dismiss:hover {
+	background-color: #d7c4a1;
+}
+
+.anno__dismiss.right {
+	position: absolute;
+	right: 0;
+	top: 5px;
+	border-radius: 0;
+	margin-top: 0;
+}
+
+/*===== Announcement bar solid ===== */
+.anno__wrap.solid::after {
+	display: none;
+}
+
+/*===== Announcement bar bottom-fixed ===== */
+.anno__wrap.bottom-fixed {
+	position: fixed;
+	color: #fff;
+	background-color: #035e2b;
+	bottom: 0;
+	padding-right: 38px;
+	right: 8px;
+}
+
+.anno__wrap.bottom-fixed .anno__btn,
+.anno__wrap.bottom-fixed .anno__dismiss {
+	color: #171717;
+	background-color: #ffeb4c;
+}
+
+.anno__wrap.bottom-fixed::after {
+	opacity: .2;
+	background-image: url(../img/18707.jpg);
+}
+
+.anno__wrap.bottom-fixed .link {
+	color: #fffd7c;
+}
+
+/*===== Announcement bar bottom-fixed-sm left ===== */
+.anno__wrap.bottom-fixed.sm-left,
+.anno__wrap.bottom-fixed.sm-right {
+	width: 350px;
+	max-width: calc(100% - 16px);
+}
+
+.anno__wrap.bottom-fixed.sm-left {
+	left: 0;
+}
+
+.anno__wrap.bottom-fixed.sm-right {
+	right: 8px;
+}
+
+/*===== Announcement bar center-fixed ===== */
+.anno__wrap.center-fixed {
+	position: fixed;
+	width: 450px;
+	max-width: 100%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	margin: 0;
+}
+
+.anno__overlay {
+	position: relative;
+	z-index: 1;
+}
+
+.anno__overlay::after {
+	position: absolute;
+	content: "";
+	height: 100%;
+	width: 100%;
+	background-color: #000;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	opacity: .7;
+}
